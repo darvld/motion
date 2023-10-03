@@ -5,8 +5,8 @@ import build.less.plugin.settings.buildless
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-// Basic configuration
 rootProject.name = "motion"
+include(":packages:core")
 
 // Project-level plugins
 pluginManagement {
