@@ -18,9 +18,7 @@ internal object Interop {
   fun initialize() {
     // only run once across all threads
     if (!initialized.compareAndSet(false, true)) return
-
-    // TODO(@darvld): remove hard-coded load
-    System.load("/usr/lib/chipmunk/libchipmunk.so")
+    System.loadLibrary("chipmunk")
   }
 
   /** Lazy [Linker] instance. */
