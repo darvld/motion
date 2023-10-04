@@ -19,6 +19,7 @@ public val VectorX: VarHandle = VectorLayout.varHandle(MemoryLayout.PathElement.
 public val VectorY: VarHandle = VectorLayout.varHandle(MemoryLayout.PathElement.groupElement(VECTOR_FIELD_Y))
 
 /** Allocate a new [VectorLayout] and initialize it to the given values. */
+@Suppress("nothing_to_inline")
 public inline fun SegmentAllocator.vector(x: Double, y: Double): MemorySegment {
   return allocate(VectorLayout).also {
     VectorX.set(it, x)
